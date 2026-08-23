@@ -3,7 +3,62 @@
 ====================================== */
 
 const morningButton =
-    document.getElementById("morningButton");
+    document.getEle/* ======================================
+   FALL-IN TEXT
+====================================== */
+
+const typewriterTexts =
+    document.querySelectorAll(
+        ".typewriter-text"
+    );
+
+let currentText = 0;
+
+
+function showNextText() {
+
+    if (
+        currentText >=
+        typewriterTexts.length
+    ) {
+
+        return;
+
+    }
+
+
+    const text =
+        typewriterTexts[currentText];
+
+
+    text.classList.add("show");
+
+
+    currentText++;
+
+
+    setTimeout(
+        showNextText,
+        1200
+    );
+
+}
+
+
+if (
+    typewriterTexts.length > 0
+) {
+
+    window.addEventListener(
+        "load",
+        () => {
+
+            showNextText();
+
+        }
+    );
+
+}mentById("morningButton");
 
 const morningMessage =
     document.getElementById("morningMessage");
@@ -189,23 +244,22 @@ if (finalAudio) {
 
 
 /* ======================================
-   FALL-FORWARD TEXT
+   FALL-IN TEXT
 ====================================== */
 
-const textLines =
+const typewriterTexts =
     document.querySelectorAll(
         ".typewriter-text"
     );
 
+let currentText = 0;
 
-let currentLine = 0;
 
-
-function showNextLine() {
+function showNextText() {
 
     if (
-        currentLine >=
-        textLines.length
+        currentText >=
+        typewriterTexts.length
     ) {
 
         return;
@@ -213,33 +267,33 @@ function showNextLine() {
     }
 
 
-    const line =
-        textLines[currentLine];
+    const text =
+        typewriterTexts[currentText];
 
 
-    line.classList.add("show");
+    text.classList.add("show");
 
 
-    currentLine++;
+    currentText++;
 
 
     setTimeout(
-        showNextLine,
-        900
+        showNextText,
+        1200
     );
 
 }
 
 
 if (
-    textLines.length > 0
+    typewriterTexts.length > 0
 ) {
 
     window.addEventListener(
         "load",
         () => {
 
-            showNextLine();
+            showNextText();
 
         }
     );
