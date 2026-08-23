@@ -60,8 +60,29 @@
 }
 
 
+/* ======================================
+   FALL-FORWARD TEXT
+====================================== */
+
 .typewriter-text {
-    visibility: hidden;
+    opacity: 0;
+
+    transform:
+        translateY(-18px)
+        scale(0.96);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+.typewriter-text.show {
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
 }
 
 
