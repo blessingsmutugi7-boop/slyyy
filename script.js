@@ -45,7 +45,7 @@ if (morningButton && morningMessage) {
 
                 });
 
-        }, 350);
+        }, 300);
 
 
         morningButton.style.display =
