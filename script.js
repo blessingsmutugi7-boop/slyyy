@@ -45,7 +45,7 @@ if (morningButton && morningMessage) {
 
                 });
 
-        }, 300);
+        }, 350);
 
 
         morningButton.style.display =
@@ -311,7 +311,7 @@ const starsContainer =
 if (starsContainer) {
 
     const numberOfStars =
-        220;
+        120;
 
 
     for (
