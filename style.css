@@ -1,0 +1,641 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/* ======================================
+   MORNING CARD
+====================================== */
+
+.morning-card {
+    position: relative;
+    z-index: 2;
+
+    width: min(90%, 650px);
+
+    padding: 40px;
+
+    text-align: center;
+
+    color: #fff8f0;
+
+    background: transparent;
+
+    border: 1px solid rgba(255, 255, 255, 0.04);
+
+    border-radius: 30px;
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: blur(2px);
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.08);
+
+    overflow: hidden;
+}
+
+
+/* ======================================
+   CARD TEXT
+====================================== */
+
+.morning-card h1 {
+    margin-bottom: 20px;
+
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    font-weight: 600;
+
+    text-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.morning-card p {
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    margin: 12px 0;
+}
+
+
+.typewriter-text {
+    visibility: hidden;
+}
+
+
+/* ======================================
+   MORNING BUTTON
+====================================== */
+
+.morning-card button {
+    margin-top: 20px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #fff8f0;
+
+    color: #7a4050;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.morning-card button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ======================================
+   BODY
+====================================== */
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 50% 25%,
+            #26345f 0%,
+            #111a38 35%,
+            #080d20 70%,
+            #030611 100%
+        );
+
+    overflow: hidden;
+}
+
+
+/* ======================================
+   SUN
+====================================== */
+
+.sun {
+    width: 180px;
+
+    height: 180px;
+
+    background:
+        radial-gradient(
+            circle,
+            #ffe6a3 0%,
+            #ffd166 45%,
+            rgba(255, 209, 102, 0.85) 70%,
+            rgba(255, 209, 102, 0) 100%
+        );
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    top: 70%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 1;
+
+    box-shadow:
+        0 0 35px rgba(255, 209, 102, 0.7),
+        0 0 80px rgba(246, 197, 143, 0.5),
+        0 0 130px rgba(217, 139, 118, 0.35);
+
+    animation:
+        sunRise 8s ease-out forwards;
+}
+
+
+@keyframes sunRise {
+
+    0% {
+        top: 70%;
+    }
+
+    100% {
+        top: 15%;
+    }
+
+}
+
+
+/* ======================================
+   MORNING MESSAGE
+====================================== */
+
+.morning-message {
+    display: none;
+
+    margin-top: 30px;
+
+    opacity: 0;
+
+    transform: translateY(12px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+
+.morning-message p {
+    margin: 18px 0;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    font-style: italic;
+}
+
+
+/* ======================================
+   FINAL BUTTON
+====================================== */
+
+#finalButton {
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #fff8f0;
+
+    color: #7a4050;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+#finalButton:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ======================================
+   FINAL CONTENT
+====================================== */
+
+.final-content {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+/* ======================================
+   FINAL PAGE — CARIBBEAN
+====================================== */
+
+body.final-page {
+    margin: 0;
+
+    min-height: 100vh;
+
+    background-image:
+        url("images/caribbean.jpg");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: scroll;
+}
+
+
+/* ======================================
+   PHOTO FRAME
+====================================== */
+
+.photo-frame {
+    width: min(95vw, 600px);
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.15);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(8px);
+}
+
+
+.photo-frame img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ======================================
+   AUDIO CARD
+====================================== */
+
+.audio-card {
+    width: min(90%, 450px);
+
+    padding: 15px 20px;
+
+    background:
+        rgba(255, 255, 255, 0.15);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+
+.audio-card audio {
+    width: 100%;
+}
+
+
+/* ======================================
+   MESSAGE AREA
+====================================== */
+
+.message-area {
+    width: min(90%, 650px);
+
+    min-height: 100px;
+
+    margin-bottom: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+
+#finalMessage {
+    margin: 0;
+
+    font-size:
+        clamp(1.1rem, 3vw, 1.5rem);
+
+    line-height: 1.7;
+
+    text-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.3);
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+/* ======================================
+   MOON
+====================================== */
+
+.moon {
+    width:
+        clamp(90px, 22vw, 150px);
+
+    height:
+        clamp(90px, 22vw, 150px);
+
+    position: absolute;
+
+    top: 10%;
+
+    right: 10%;
+
+    border-radius: 50%;
+
+    background: #fff4d6;
+
+    box-shadow:
+        0 0 25px rgba(255, 244, 214, 0.9),
+        0 0 60px rgba(255, 244, 214, 0.45),
+        0 0 120px rgba(255, 244, 214, 0.2);
+
+    z-index: 1;
+
+    animation:
+        moonSet 6s ease-in 2s forwards;
+}
+
+
+@keyframes moonSet {
+
+    0% {
+        transform:
+            translateY(0)
+            scale(1);
+
+        opacity: 1;
+    }
+
+    70% {
+        transform:
+            translateY(45vh)
+            scale(0.9);
+
+        opacity: 0.8;
+    }
+
+    100% {
+        transform:
+            translateY(70vh)
+            scale(0.65);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* ======================================
+   NORMAL NIGHT SKY STARS
+====================================== */
+
+.stars {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+
+.star {
+    position: absolute;
+
+    width: 2px;
+
+    height: 2px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 6px rgba(255, 255, 255, 0.8);
+
+    animation:
+        twinkle 3s ease-in-out infinite alternate;
+}
+
+
+@keyframes twinkle {
+
+    0% {
+        opacity: 0.25;
+
+        transform:
+            scale(0.7);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            scale(1.4);
+    }
+
+}
+
+
+/* ======================================
+   FULL SCREEN GALAXY
+====================================== */
+
+.galaxy {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+
+    height: 100vh;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    opacity: 0;
+
+    animation:
+        galaxyAppear 5s ease forwards 10s;
+}
+
+
+@keyframes galaxyAppear {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+
+}
+
+
+/* ======================================
+   GALAXY STARS
+====================================== */
+
+.galaxy-star {
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow:
+        0 0 4px rgba(255, 255, 255, 0.8),
+        0 0 8px rgba(255, 255, 255, 0.35);
+
+    pointer-events: none;
+
+    will-change: transform;
+}
+
+
+/* ======================================
+   PAGE TITLE HEADER
+====================================== */
+
+.page-header {
+    position: fixed;
+
+    top: 18px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 10px 28px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.14);
+
+    border-radius: 50px;
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    z-index: 1000;
+
+    white-space: nowrap;
+}
+
+
+.page-title {
+    display: block;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    color: #fff;
+
+    background: transparent;
+
+    border: none;
+
+    padding: 0;
+
+    margin: 0;
+
+    text-shadow:
+        0 0 12px rgba(255, 255, 255, 0.25);
+
+    cursor: pointer;
+}
