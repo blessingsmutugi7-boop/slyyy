@@ -189,73 +189,23 @@ if (finalAudio) {
 
 
 /* ======================================
-   TYPEWRITER
+   FALL-FORWARD TEXT
 ====================================== */
 
-const typewriterTexts =
+const textLines =
     document.querySelectorAll(
         ".typewriter-text"
     );
 
-let currentText = 0;
+
+let currentLine = 0;
 
 
-function typeParagraph(
-    element,
-    callback
-) {
-
-    const text =
-        element.textContent.trim();
-
-
-    element.textContent =
-        "";
-
-
-    element.style.visibility =
-        "visible";
-
-
-    let index = 0;
-
-
-    function type() {
-
-        if (index < text.length) {
-
-            element.textContent +=
-                text.charAt(index);
-
-
-            index++;
-
-
-
-           setTimeout(type, 70);
-
-        } else {
-
-            setTimeout(
-                callback,
-                700
-            );
-
-        }
-
-    }
-
-
-    type();
-
-}
-
-
-function startTypewriter() {
+function showNextLine() {
 
     if (
-        currentText >=
-        typewriterTexts.length
+        currentLine >=
+        textLines.length
     ) {
 
         return;
@@ -263,38 +213,38 @@ function startTypewriter() {
     }
 
 
-    typeParagraph(
+    const line =
+        textLines[currentLine];
 
-        typewriterTexts[currentText],
 
-        () => {
+    line.classList.add("show");
 
-            currentText++;
 
-            startTypewriter();
+    currentLine++;
 
-        }
 
+    setTimeout(
+        showNextLine,
+        900
     );
 
 }
 
 
 if (
-    typewriterTexts.length > 0
+    textLines.length > 0
 ) {
 
     window.addEventListener(
         "load",
         () => {
 
-            startTypewriter();
+            showNextLine();
 
         }
     );
 
 }
-
 
 /* ======================================
    NIGHT SKY STARS
