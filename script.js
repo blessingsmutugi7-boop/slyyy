@@ -231,10 +231,8 @@ function typeParagraph(
             index++;
 
 
-            setTimeout(
-                type,
-                45
-            );
+
+           setTimeout(type, 70);
 
         } else {
 
